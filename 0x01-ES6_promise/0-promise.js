@@ -1,11 +1,15 @@
-function getResponseFromAPI() {
+function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
-    // Simulate an asynchronous operation (like an API call)
-    setTimeout(() => {
-      // Resolve the promise with some data
-      resolve("API response");
-    }, 1000);
+    if (success) {
+      resolve({
+        status: 200,
+        body: 'Success'
+      });
+    } else {
+      reject(new Error('The fake API is not working currently'));
+    }
   });
 }
 
-export default getResponseFromAPI;
+export default getFullResponseFromAPI;
+
