@@ -9,4 +9,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
         value: result.status === 'fulfilled' ? result.value : result.reason
       }));
     });
+[
+  { status: 'fulfilled', value: { firstName: 'Bob', lastName: 'Dylan' } },
+  { status: 'rejected', value: Error: bob_dylan.jpg cannot be processed }
+]
 }
